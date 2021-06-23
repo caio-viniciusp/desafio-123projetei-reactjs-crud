@@ -4,7 +4,7 @@ export default function ListaPessoa() {
   const [Pessoas,setPessoas]=useState([])
 
   useEffect(()=>{
-    fetch('http://desafio-123projetei-node.herokuapp.com/P')
+    fetch('http://desafio-123projetei-node.herokuapp.com/pessoas')
     .then((res)=>res.json())
     .then(
       (resultado)=>{
