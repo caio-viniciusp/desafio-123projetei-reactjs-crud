@@ -1,0 +1,30 @@
+
+
+.header {
+  background: var(--orange);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  padding: 0 20px;
+}
+
+.navbar ul li a:hover {
+  color: #fdc89c;
+}
+
+

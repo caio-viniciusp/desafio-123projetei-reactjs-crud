@@ -1,0 +1,29 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --orange: #ee6b00;
+}
+
+a { 
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body, input, text, label, a, header {
+  font-family: "Inter", sans-serif;
+}
