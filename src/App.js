@@ -1,16 +1,13 @@
-import React from 'react';
+import List from './pages/listar/list'
+import './styles/global.scss'
 import Header from './components/Header'
-import ListaPessoa from './ListaPessoa'
-
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <ListaPessoa />
-
-      
+      <Header/>
+      <List/>
     </div>
   );
 }
