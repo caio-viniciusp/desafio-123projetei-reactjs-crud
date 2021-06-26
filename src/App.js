@@ -1,13 +1,14 @@
-import List from './pages/listar/list'
 import './styles/global.scss'
-import Header from './components/Header'
+import Header from './components/Header/Header'
+import Main from './pages/main/main'
+
 
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <List/>
+      <Main />
     </div>
   );
 }
