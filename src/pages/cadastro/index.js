@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import api from '../../api/api.js';
-import './list.scss'
+import './index.scss'
 
-class List extends Component {
+class Store extends Component {
   
   state = {
-    pessoas:[],
+    cpf:'',
+    name:'',
+    phone:'',
+    birth:''
   }
 
   async componentDidMount() {
-    const response = await api.get('/pessoas')
+    const response = await api.post('/pessoas')
     this.setState({pessoas: response.data});
   }
   render () {
@@ -51,5 +54,7 @@ class List extends Component {
     )
   }
 }
+  
+
 
 export default List;

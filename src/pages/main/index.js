@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import './main.scss'
+import React from 'react';
+import './index.scss';
 
-class Main extends Component {
-  
-  render () {
+function Main (){
+
     return (
       <div className="inicio">
         <div className="container">
@@ -22,7 +21,7 @@ class Main extends Component {
                         <img src="/icon-lista.svg" alt="icone"></img>
                       </div>
                       <div className="card-footer">
-                        <a href="/">LISTAR PESSOAS</a>
+                        <a href="/pessoas">LISTAR PESSOAS</a>
                       </div>
                   </div>
                 </div>
@@ -30,6 +29,6 @@ class Main extends Component {
       </div>
     )
   }
-}
+
 
 export default Main;

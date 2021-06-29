@@ -1,7 +1,7 @@
 .inicio {
   h1 {
     text-align: center;
-    color: #51545E;
+    color: #51545e;
     font-size: 1.5em;
     margin: 50px 0 25px 0;
     margin-bottom: 20px;
@@ -10,8 +10,9 @@
   .cards {
     display: flex;
     justify-content: center;
-    
-    .card{
+    flex-wrap: wrap;
+
+    .card {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,7 +27,7 @@
       .card-icon {
         padding-bottom: 40px;
       }
-      
+
       .card-footer {
         display: flex;
         justify-content: center;
@@ -47,4 +48,3 @@
     }
   }
 }
-
