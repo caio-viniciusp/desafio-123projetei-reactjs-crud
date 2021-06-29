@@ -13,7 +13,7 @@ function Main (){
                         <img src="/icon-novocadastro.svg" alt="icone"></img>
                       </div>
                     <div className="card-footer">
-                      <a href="/cadastrar/">Novo Cadastro</a>
+                      <a href="/cadastrar">Novo Cadastro</a>
                     </div>
                   </div>
                   <div className="card">

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../../api/api.js';
-import './index.scss'
+import './index.scss';
 
 
 class List extends Component {
@@ -15,6 +16,7 @@ class List extends Component {
   }
   render () {
     const {pessoas} = this.state
+    console.log(pessoas)
     return (
       <div className="lista">
         <div className="container">
@@ -39,7 +41,7 @@ class List extends Component {
                       </div>
                     </div>
                     <div className="card-footer">
-                    <a href="/visualizar/">Ver detalhes</a>
+                    <a href="/pessoas/:cpf"><Link to={`/pessoas/${pessoa.cpf}`}>Ver detalhes</Link></a>
                   </div>
                   </div>
                 </div>

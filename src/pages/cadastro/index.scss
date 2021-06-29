@@ -1,0 +1,56 @@
+.cadastro {
+  display: flex;
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  background: #fff;
+  border-radius: 10px;
+  width: 500px;
+
+  h3 {
+    text-align: center;
+    padding: 30px;
+    color: #51545E;
+  }
+  label{
+    display: flex;
+    font-family: "Inter",sans-serif;
+    font-weight: 500;
+    align-items: flex-start;
+    margin-left: 50px;
+    color: #51545E;
+  }
+  input {
+    
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    margin: 20px 50px;
+    outline-color: var(--orange);
+    border: none;
+    background: #fef1ff;
+    color: #51545E;
+    border-radius: 5px;
+  }
+  input::placeholder {
+    font-family: "Inter", sans-serif;
+  }
+
+
+  button {
+    margin: 20px auto 40px auto;
+    font-size: 0.9em;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    text-transform: uppercase;
+    background: #f26122;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+  }
+}
+}
