@@ -3,7 +3,7 @@
   h1 {
     text-align: center;
     color: #51545E;
-    font-size: 1.5em;
+    font-size: 1.25em;
     margin: 50px 0 25px 0;
     margin-bottom: 20px;
   }
@@ -72,6 +72,9 @@
             background: #f26122;
             border-radius: 10px;
           }
+          a:hover{
+            background: #c03803;
+          }
         }
       }      
     }
@@ -100,6 +103,10 @@
 
   .lista{
     
+    h1 {
+      font-size: 100%;
+      margin: 20px;
+    }
     ul {
       display: flex;
       justify-content: center;

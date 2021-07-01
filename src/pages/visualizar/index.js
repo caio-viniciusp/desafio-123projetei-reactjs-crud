@@ -45,8 +45,8 @@ class View extends Component {
           </div>
         </div>
         <div className="modal-footer">
-          <a href={`/editar/${pessoa.cpf}`}>Editar</a>
-          <a href="/deletar"><Link to={`/excluir/${pessoa.cpf}`}>Excluir</Link></a>
+          <a href={`/pessoas/editar/${pessoa.cpf}`}className="editar"><Link to={`/pessoas/editar/${pessoa.cpf}`}>editar</Link></a>
+          <a href={`/pessoas/excluir/${pessoa.cpf}`} className="excluir"><Link to={`/pessoas/excluir/${pessoa.cpf}`}>Excluir</Link></a>
         </div>
       </div>
     )
