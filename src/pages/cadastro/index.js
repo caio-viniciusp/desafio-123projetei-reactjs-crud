@@ -19,9 +19,9 @@ class Store extends Component {
     }
 
     handleSubmit = async (event) => {
-      event.preventDefault();
+        event.preventDefault();
         await api.post('/pessoas')
-        this.props.history.push('/')
+        this.props.history.push('/pessoas')
     }
 
   render () {
