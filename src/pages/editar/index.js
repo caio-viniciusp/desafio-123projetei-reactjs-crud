@@ -3,63 +3,89 @@ import api from '../../api/api';
 import './index.scss';
 
 class Edit extends Component {
-
-  state = {
-    pessoa: {
-    },
+  constructor(props){
+    super(props);
+ 
+    this.state = {
+        pessoa: {
+          cpf:'',
+          name:'',
+          phone:'',
+          birth:''
+        }
+        
+   }
   }
 
   async componentDidMount() {
-    var { cpf } = this.props.match.params;
-    var response = await api.get(`/pessoas/${cpf}`) 
+    const { cpf } = this.props.match.params;
+    const response = await api.get(`/pessoas/${cpf}`) 
     this.setState({pessoa: response.data});
+    
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value 
+    })
   }
+
   
-  handleSubmit = async (event) => {
+  handleSubmit = event => {
     event.preventDefault();
-    await api.put('/pessoas')
-    this.props.history.push('/pessoas')
-  }   
+    const { cpf } = this.props.match.params;
+    api.put(`/pessoas/${cpf}`, this.state)
+    .then(response => {
+      console.log(response)
+    })
+    .catch(error => {
+      api.put(`/pessoas/${cpf}`, this.state)
+      console.log(error)
+    })
+  }
 
   render () {
+    
+    var {pessoa} = this.state
+    console.log(this.state)
     return(
       <div className="editPessoa">
-        <form onSubmit={this.handleSubmit}>
-        <h3>Editar Dados da Pessoa</h3>
-          <label>CPF:</label>
-          <input 
-          type="text" 
-          value={this.state.pessoa.cpf} 
-          onChange={this.handleChange} 
-          className="inputfield"/>
-
-          <label>Nome:</label>
+         <form onSubmit={this.handleSubmit} className="form">
+          <h3>Cadastrar Pessoa Física</h3>
+          <div key={pessoa.cpf}>
+          <label>
+          Nome:</label>
           <input
           type="text"
-          value={this.state.pessoa.name}
-          onChange={this.handleChange} 
+          name="name"
+          value={pessoa.name}
+          onChange={this.handleChange}
           className="inputfield"/>
 
-          <label>Data de Nascimento:</label>
+          <label>
+          Data de Nascimento:</label>
           <input
           type="date"
-          value={this.state.pessoa.birth}
+          name="birth"
+          value={pessoa.birth}
           onChange={this.handleChange}
           className="inputfield"/>
-
-          <label>Telefone:</label>
+          
+          <label>
+          Telefone:</label>
           <input
-          type="text" 
-          value={this.state.pessoa.phone} 
+          type="text"
+          name="phone"
+          value={pessoa.phone}
           onChange={this.handleChange}
           className="inputfield"/>
 
-          <input type="submit" value="Atualizar" className="btn"/>
-      </form>
+          <input
+          type="submit"
+          value="Cadastrar"
+          className="btn"/>
+          </div>
+          </form>
       </div>
     )
   }
